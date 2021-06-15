@@ -1,0 +1,14 @@
+{
+  "name": "@vizgen/testing_something",
+  "main": "e8d189d57c74cf2e@1020.js",
+  "version": "1020.0.0",
+  "homepage": "https://observablehq.com/@vizgen/testing_something",
+  "author": {
+    "name": "vizgen",
+    "url": "https://observablehq.com/@vizgen"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}
