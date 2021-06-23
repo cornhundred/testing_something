@@ -19,16 +19,15 @@ d3.selectAll('.observablehq').style('display', 'none')
 
 // display
 ////////////////////////////////
-setTimeout(function(){
-  d3.select('#dashboard').node().parentNode.style.display = 'block'
-}, 500)
+// setTimeout(function(){
+//   console.log('display')
+//   d3.select('#dashboard').node().parentNode.style.display = 'block'
+// }, 500)
 
-setTimeout(function(){
+[100, 500, 1000, 2000, 3000, 5000, 7500, 10000].forEach(x => setTimeout(function(){
+  console.log('display')
   d3.select('#dashboard').node().parentNode.style.display = 'block'
-}, 1000)
+}, x))
 
-setTimeout(function(){
-  d3.select('#dashboard').node().parentNode.style.display = 'block'
-}, 2000)
 
 </script>
