@@ -6,6 +6,10 @@ https://cornhundred.github.io/testing_something/observable_export_testing_someth
 
 https://cornhundred.github.io/testing_something/cell_umap_spatial_gene/
 
-## Cell, Transctipts, Cell Polygons, Clicking Genes
+## UMAP-Spatial, Cells, Gene Dropdown
+
+https://cornhundred.github.io/testing_something/cell_umap_spatial_gene_better_display/
+
+## UMAP-Spatial, Cells, Transctipts, Cell Polygons, Gene Dropdown/Clicking
 
 https://cornhundred.github.io/testing_something/cell_transcripts_polygons_clicking
