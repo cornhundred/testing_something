@@ -1,0 +1,14 @@
+{
+  "name": "@vizgen/cell_umap_spatial_genes",
+  "main": "e8d189d57c74cf2e@1234.js",
+  "version": "1234.0.0",
+  "homepage": "https://observablehq.com/@vizgen/cell_umap_spatial_genes",
+  "author": {
+    "name": "vizgen",
+    "url": "https://observablehq.com/@vizgen"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}

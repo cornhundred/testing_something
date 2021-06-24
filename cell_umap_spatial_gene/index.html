@@ -20,7 +20,6 @@ d3.selectAll('.observablehq').style('display', 'none')
 // display
 ////////////////////////////////
 setTimeout(function(){
-  console.log('display')
   d3.select('#dashboard').node().parentNode.style.display = 'block'
 }, 500)
 
@@ -48,9 +47,15 @@ setTimeout(function(){
   d3.select('#dashboard').node().parentNode.style.display = 'block'
 }, 10000)
 
-// [100, 500, 1000, 2000, 3000, 5000, 7500, 10000].forEach(x => setTimeout(function(){
-//   console.log('display')
-//   d3.select('#dashboard').node().parentNode.style.display = 'block'
+// // cleaner delay thing
+// ///////////////////////
+// var delay_times = [100, 500, 1000, 2000, 3000, 5000, 7500, 10000, 15000]
+// delay_times.forEach(x => setTimeout(function(){
+//   console.log('display', x)
+//   console.log('is empty', d3.select('#dashboard').empty())
+//   if (d3.select('#dashboard').empty() === false){
+//     d3.select('#dashboard').node().parentNode.style.display = 'block'
+//   }
 // }, x))
 
 
