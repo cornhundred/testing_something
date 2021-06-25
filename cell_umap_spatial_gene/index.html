@@ -15,48 +15,29 @@ import {Runtime, Library, Inspector} from "./runtime.js";
 const runtime = new Runtime();
 const main = runtime.module(define, Inspector.into(document.body));
 
-d3.selectAll('.observablehq').style('display', 'none')
+// Display dashboard, hide everything else
+/////////////////////////////////////////////
+var delay_times = [100, 500, 1000, 2000, 3000, 5000, 7500, 10000, 15000, 20000]
+delay_times.forEach(x => setTimeout(function(){
+  console.log('display', x, 'is empty', d3.select('#dashboard').empty())
 
-// display
-////////////////////////////////
-setTimeout(function(){
-  d3.select('#dashboard').node().parentNode.style.display = 'block'
-}, 500)
+  // if dashboard is available show it and set auto-switch to spatial
+  if (d3.select('#dashboard').empty() === false &&
+      d3.select('#Spatial').classed('switched') == false){
 
+    d3.selectAll('.observablehq').style('display', 'none')
 
-setTimeout(function(){
-  console.log('display')
-  d3.select('#dashboard').node().parentNode.style.display = 'block'
-}, 1000)
+    d3.select('#dashboard').node().parentNode.style.display = 'block'
 
+    // assign switched class to indicate it will be switched
+    d3.select('#Spatial').classed('switched', true)
 
-setTimeout(function(){
-  console.log('display')
-  d3.select('#dashboard').node().parentNode.style.display = 'block'
-}, 2000)
-
-
-setTimeout(function(){
-  console.log('display')
-  d3.select('#dashboard').node().parentNode.style.display = 'block'
-}, 5000)
-
-
-setTimeout(function(){
-  console.log('display')
-  d3.select('#dashboard').node().parentNode.style.display = 'block'
-}, 10000)
-
-// // cleaner delay thing
-// ///////////////////////
-// var delay_times = [100, 500, 1000, 2000, 3000, 5000, 7500, 10000, 15000]
-// delay_times.forEach(x => setTimeout(function(){
-//   console.log('display', x)
-//   console.log('is empty', d3.select('#dashboard').empty())
-//   if (d3.select('#dashboard').empty() === false){
-//     d3.select('#dashboard').node().parentNode.style.display = 'block'
-//   }
-// }, x))
-
+    console.log('start timer for spatial switch')
+    setTimeout(function(){
+      console.log('switch to Spatial!')
+      d3.select('#Spatial').dispatch('click');
+    }, 5000)
+  }
+}, x))
 
 </script>
