@@ -12,28 +12,30 @@ import {Runtime, Library, Inspector} from "./runtime.js";
 const runtime = new Runtime();
 const main = runtime.module(define, Inspector.into(document.body));
 
-// // Display dashboard, hide everything else
-// /////////////////////////////////////////////
-// d3.selectAll('.observablehq').style('display', 'none')
-// var delay_times = [100, 500, 1000, 2000, 3000, 5000, 7500, 10000, 15000, 20000]
-// delay_times.forEach(x => setTimeout(function(){
-//   console.log('display', x, 'is empty', d3.select('#dashboard').empty())
+// Display dashboard, hide everything else
+/////////////////////////////////////////////
 
-//   // if dashboard is available show it and set auto-switch to spatial
-//   if (d3.select('#dashboard').empty() === false &&
-//       d3.select('#Spatial').classed('switched') == false){
+var delay_times = [100, 500, 1000, 2000, 3000, 5000, 7500, 10000, 15000, 20000]
+delay_times.forEach(x => setTimeout(function(){
+  console.log('display', x, 'is empty', d3.select('#dashboard').empty())
 
-//     d3.select('#dashboard').node().parentNode.style.display = 'block'
+  // if dashboard is available show it and set auto-switch to spatial
+  if (d3.select('#dashboard').empty() === false &&
+      d3.select('#Spatial').classed('switched') == false){
 
-//     // assign switched class to indicate it will be switched
-//     d3.select('#Spatial').classed('switched', true)
+    d3.selectAll('.observablehq').style('display', 'none')
 
-//     console.log('start timer for spatial switch')
-//     setTimeout(function(){
-//       console.log('switch to Spatial!')
-//       d3.select('#Spatial').dispatch('click');
-//     }, 5000)
-//   }
-// }, x))
+    d3.select('#dashboard').node().parentNode.style.display = 'block'
+
+    // assign switched class to indicate it will be switched
+    d3.select('#Spatial').classed('switched', true)
+
+    console.log('start timer for spatial switch')
+    setTimeout(function(){
+      console.log('switch to Spatial!')
+      d3.select('#Spatial').dispatch('click');
+    }, 5000)
+  }
+}, x))
 
 </script>
