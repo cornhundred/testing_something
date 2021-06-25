@@ -1,0 +1,14 @@
+{
+  "name": "1efea5d337c6a001",
+  "main": "1efea5d337c6a001@1638.js",
+  "version": "1638.0.0",
+  "homepage": "https://observablehq.com/d/1efea5d337c6a001",
+  "author": {
+    "name": "Nicolas Fernandez",
+    "url": "https://observablehq.com/@cornhundred"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}
