@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Cells, Transcripts, Polygons, Clicking, Heatmap</title>
+<link rel="stylesheet" type="text/css" href="./inspector.css">
+<body>
+<script src="https://cdn.jsdelivr.net/npm/d3-selection@3"></script>
+<script type="module">
+
+import define from "./index.js";
+import {Runtime, Library, Inspector} from "./runtime.js";
+
+const runtime = new Runtime();
+const main = runtime.module(define, Inspector.into(document.body));
+
+// Display dashboard, hide everything else
+/////////////////////////////////////////////
+// d3.selectAll('.observablehq').style('display', 'none')
+var delay_times = [100, 500, 1000, 2000, 3000, 5000, 7500, 10000, 15000, 20000]
+delay_times.forEach(x => setTimeout(function(){
+  console.log('display', x, 'is empty', d3.select('#dashboard').empty())
+
+  // if dashboard is available show it and set auto-switch to spatial
+  if (d3.select('#dashboard').empty() === false &&
+      d3.select('#Spatial').classed('switched') == false){
+
+    d3.selectAll('.observablehq').style('display', 'none')
+
+    d3.select('#dashboard').node().parentNode.style.display = 'block'
+
+    // assign switched class to indicate it will be switched
+    d3.select('#Spatial').classed('switched', true)
+
+    console.log('start timer for spatial switch')
+    setTimeout(function(){
+      console.log('switch to Spatial!')
+      d3.select('#Spatial').dispatch('click');
+    }, 5000)
+  }
+}, x))
+
+</script>
