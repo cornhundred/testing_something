@@ -13,3 +13,8 @@ https://cornhundred.github.io/testing_something/cell_umap_spatial_gene_better_di
 ## UMAP-Spatial, Cells, Transctipts, Cell Polygons, Gene Dropdown/Clicking
 
 https://cornhundred.github.io/testing_something/cell_transcripts_polygons_clicking
+
+## Heatmap
+https://cornhundred.github.io/testing_something/cell_transcripts_polygons_clicking_heatmap
+
+https://cornhundred.github.io/testing_something/real_data_next_output
