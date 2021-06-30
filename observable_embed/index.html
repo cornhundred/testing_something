@@ -1,0 +1,8 @@
+<div id="observablehq-dashboard-697d3ccb"></div>
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/3e18a6e35ce4919b.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "dashboard") return new Inspector(document.querySelector("#observablehq-dashboard-697d3ccb"));
+});
+</script>
