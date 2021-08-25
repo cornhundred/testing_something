@@ -25,3 +25,5 @@ https://cornhundred.github.io/testing_something/real_data_next_output
 
 ### Latest
 https://cornhundred.github.io/testing_something/heatmap_mean_genes
+
+https://cornhundred.github.io/testing_something/heatmap_mean_genes_v2
